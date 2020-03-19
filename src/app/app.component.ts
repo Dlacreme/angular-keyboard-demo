@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'keyboard-demo';
+  title = '';
+
+  public onKeyPress(key: string): void {
+    this.title += key;
+  }
+
+  public removeLast(): void {
+    this.title = this.title.substring(0, this.title.length - 1);
+  }
+
 }
