@@ -1,0 +1,5 @@
+<div>
+  <div class="row" *ngFor="let row of getRows()">
+    <span *ngFor="let key of row" (click)="pushed(key)">{{ key.label }}</span>
+  </div>
+</div>
